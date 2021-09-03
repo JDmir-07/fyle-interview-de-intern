@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
     float: returns the extracted amount
 
 '''
-def get_data_from_Image(path):      # it takes time to process this around a minute
+def get_data_from_Image(path):      # it takes time to process this, around a minute
                 # used ocr.space to get the text out of the image
     url_api = 'https://api.ocr.space/parse/image'
     api_key = '105fcebecc88957'
@@ -69,7 +69,7 @@ def extract_amount(dirpath: str) -> float:
     logger.info('extract_amount called for dir %s', dirpath)
     # your logic goes here
 
-    # comment and uncomment the two lines below to for required process
+    # comment and uncomment the two lines below for required process
 ##    result = get_data_from_Image(dirpath)
     result = get_data_from_Json(dirpath)
     
